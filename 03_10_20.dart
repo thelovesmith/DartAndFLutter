@@ -5,4 +5,9 @@ void main(){
 
   var d = a+c+b;
   print(d);
+
+  for (int i = 0; i < 5: i++){
+    print(i)
+  }
+
 }
