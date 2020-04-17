@@ -1,7 +1,7 @@
 main(List<String> arguments) {
   // entry point for execution
   print("Hello World");
-  //Variable = spot in memory.  Or just a bucket to hold a value.
+  //Variable = spot in memory. Or just a bucket to hold a value.
   //Type??
   /*
       String
@@ -19,6 +19,12 @@ main(List<String> arguments) {
   String city = "Philadelphia"; //explicit
 
 //Numbers
+  int number = 34;
+  int numberTwo = 2;
+
+  double pii = 3.14;
+  double gravity = 9.8;
+
   num fingers = 5; //
   int toes = 5; // no decimals
   double myAge = 27.0; //decimals
@@ -38,6 +44,14 @@ main(List<String> arguments) {
 
   // print(isTrue);
 
+//Concatenation
+
+  String name = "James";
+  String lastName = "Bond";
+  int hisAge = 45;
+
+  print(name + " " + lastName);
+  print("$name ${lastName.toUpperCase()} is $hisAge and is a decent spy ");
 /*
       Const and final keywords
       const = we use this keyword when we want the value/variable to be a constant
@@ -63,37 +77,31 @@ main(List<String> arguments) {
   // const pi = 3.14:
   // pi = 5; //Doesnt work
 
-  int number = 34;
-  int numberTwo = 2;
-
-  double pii = 3.14;
-  double gravity = 9.8;
-
   //for loop
-  var fruit = "Mango";
-  for (var i = 0; i < 10; i++) {
-    if (i % 3 == 0) {
-      print("$fruit $i");
-    }
-  }
+  // var fruit = "Mango";
+  // for (var i = 0; i < 10; i++) {
+  //   if (i % 3 == 0) {
+  //     print("$fruit $i");
+  //   }
+  // }
 
 // Switch case
-  var age = 18;
+//   var age = 18;
 
-  switch (age) {
-    case 19:
-      print("Old enough");
-      break;
-    case 20:
-      print("Still good");
-      break;
-    case 89:
-      print("Too old!");
-      break;
+//   switch (age) {
+//     case 19:
+//       print("Old enough");
+//       break;
+//     case 20:
+//       print("Still good");
+//       break;
+//     case 89:
+//       print("Too old!");
+//       break;
 
-    default:
-      print("Default $age");
-  }
+//     default:
+//       print("Default $age");
+//   }
 
   // while and do while loop
 
