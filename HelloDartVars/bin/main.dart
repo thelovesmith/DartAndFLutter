@@ -1,10 +1,9 @@
-
-
-main(List<String> arguments) { // entry point for execution
+main(List<String> arguments) {
+  // entry point for execution
   print("Hello World");
   //Variable = spot in memory.  Or just a bucket to hold a value.
   //Type??
-   /*
+  /*
       String
       Number (integers and doubles)
       Boolean - 1 or 0, true or false
@@ -16,7 +15,7 @@ main(List<String> arguments) { // entry point for execution
       doubles do have a decimal point.  1.1, 0.2...
 */
 //Variables
-  var country = "Africa"; //implicit; generic; fluid; 
+  var country = "Africa"; //implicit; generic; fluid;
   String city = "Philadelphia"; //explicit
 
 //Numbers
@@ -33,8 +32,6 @@ main(List<String> arguments) { // entry point for execution
   bool isFalse = false;
 
   // print(isTrue);
-
-
 
 /*
       Const and final keywords
@@ -54,37 +51,29 @@ main(List<String> arguments) { // entry point for execution
       4/3 = remainder?
     */
 
-    // var  island = "Jamaica";
-    // var pi = 3.14;
-    // pi = 5; // We don' twant this so use Final
+  // var  island = "Jamaica";
+  // var pi = 3.14;
+  // pi = 5; // We don' twant this so use Final
 
-    const pi = 3.14
-    pi = 5; //Doesnt work
+  // const pi = 3.14:
+  // pi = 5; //Doesnt work
 
+  int number = 34;
+  int numberTwo = 2;
 
+  double pii = 3.14;
+  double gravity = 9.8;
 
-
-
-
-   int number = 34;
-   int numberTwo = 2;
-
-   double pi = 3.14;
-   double gravity = 9.8;
-
-   //for loop
-   var fruit = "Mango";
-  for(var i = 0; i < 10; i++) {
-    if(i % 3 == 0) {
+  //for loop
+  var fruit = "Mango";
+  for (var i = 0; i < 10; i++) {
+    if (i % 3 == 0) {
       print("$fruit $i");
-
     }
-
   }
 
-
 // Switch case
-var age = 18;
+  var age = 18;
 
   switch (age) {
     case 19:
@@ -97,16 +86,11 @@ var age = 18;
       print("Too old!");
       break;
 
-      default:
-        print("Default $age");
+    default:
+      print("Default $age");
   }
 
-
-
-
-
- // while and do while loop
-
+  // while and do while loop
 
 //  do {
 //    print("Hello World");
@@ -120,22 +104,6 @@ var age = 18;
 //
 //  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //
 //   if( !(number != 100) && number <= 100 ) { //False AND True
 //
@@ -145,7 +113,6 @@ var age = 18;
 //
 //   }
 
-
 //   if( !(number != 100) || number >= 100 ) { //False Or True
 //
 //     print("Not a hundred!");
@@ -154,36 +121,13 @@ var age = 18;
 //
 //   }
 
+  //var result = 4 / 2;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   //var result = 4 / 2;
-
-   //print(pi <= gravity);
+  //print(pi <= gravity);
 
   // print(number is! bool);
 
-
-
-   //If statement
+  //If statement
 //  if(number != 34) {
 //     print("If true, this will run!");
 //
@@ -191,29 +135,7 @@ var age = 18;
 //    print("Else running!");
 //  }
 
-
-
-
-
-
-
-
-   //print(4%3);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  //print(4%3);
 
 //   String name = "James"; // James Bond is 45 years old.
 //   String lastName = "Bond";
@@ -224,55 +146,16 @@ var age = 18;
 //   print("$name $lastName is $age");
 //   print("Hello there $name ${lastName.toUpperCase()}");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
 //   bool isTrue = true;
 //   bool isFalse = false;
 //
 //   print(isTrue);
-   
-   
-   
-   
-   
-   
-   
-   
-   
 
 //   int age = 13;
 //   double number = 23.34;
 //
 //
 //   print(number);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //  var country;
 //
@@ -284,5 +167,3 @@ var age = 18;
 //
 //  print(country);
 }
-
-
