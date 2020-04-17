@@ -19,11 +19,6 @@ main(List<String> arguments) {
   String city = "Philadelphia"; //explicit
 
 //Numbers
-  int number = 34;
-  int numberTwo = 2;
-
-  double pii = 3.14;
-  double gravity = 9.8;
 
   num fingers = 5; //
   int toes = 5; // no decimals
@@ -51,7 +46,8 @@ main(List<String> arguments) {
   int hisAge = 45;
 
   print(name + " " + lastName);
-  print("$name ${lastName.toUpperCase()} is $hisAge and is a decent spy ");
+  print(
+      "$name ${lastName.toUpperCase()} is ${hisAge.isEven} and is a decent spy ");
 /*
       Const and final keywords
       const = we use this keyword when we want the value/variable to be a constant
@@ -62,6 +58,29 @@ main(List<String> arguments) {
       Equality and Relational Operators ( ==, !=, >, <, >=, <=)
       as, is and is!
 
+      remainder = "what remains after a division operation"
+      4/3 remainder =??
+      4 % 3 = 1 
+      
+      */
+
+  int number = 34;
+  int numberTwo = 2;
+
+  double pii = 3.14;
+  double gravity = 9.8;
+  // Artithmetic operators
+  print(number == numberTwo); //false
+  var result = number + numberTwo; //+
+  var resultMinus = number - numberTwo; //-
+  var resultDivision = numberTwo /
+      number; //Dart automatically changes the two integers into a Double
+  print(resultDivision); //0.058823529411764705
+  print("$result, this is var"); //36, this is var
+  print("$resultMinus, this is var"); //32, this is var
+
+  print(4 % 3);
+/*
       Logical Operators ( !, ||, &&)
       OR(||) -> Only one "side" needs to be True for the whole expression to be true
       AND (&&) The expression is true, if both sides are true
