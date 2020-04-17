@@ -23,8 +23,13 @@ main(List<String> arguments) {
   int toes = 5; // no decimals
   double myAge = 27.0; //decimals
   double net = 1000.45;
+  num meee = 5.45;
 
-  // print(myAge * net);
+  print(myAge * net); // works
+  print(myAge * meee); // works
+  print(myAge * toes);
+  print("heyyy");
+  print(toes + net); // works
 
 //Booleans
 
