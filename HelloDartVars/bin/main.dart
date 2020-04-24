@@ -1,8 +1,10 @@
+import 'dart:ffi';
+
 main(List<String> arguments) {
   // entry point for execution
   print("Hello World");
   //Variable = spot in memory. Or just a bucket to hold a value.
-  //Type??
+  //!Type??
   /*
       String
       Number (integers and doubles)
@@ -14,11 +16,11 @@ main(List<String> arguments) {
       integers are numbers without a decimal point.  1,2, 3, 5, 10 etc
       doubles do have a decimal point.  1.1, 0.2...
 */
-//Variables
+//!Variables
   var country = "Africa"; //implicit; generic; fluid;
   String city = "Philadelphia"; //explicit
 
-//Numbers
+//!Numbers
 
   num fingers = 5; //
   int toes = 5; // no decimals
@@ -32,32 +34,33 @@ main(List<String> arguments) {
   print("heyyy");
   print(toes + net); // works
 
-//Booleans
+//!Booleans
 
   bool isTrue = true;
   bool isFalse = false;
 
   // print(isTrue);
 
-//Concatenation
+//!Concatenation
 
   String name = "James";
   String lastName = "Bond";
   int hisAge = 45;
 
-  print(name + " " + lastName);
-  print(
-      "$name ${lastName.toUpperCase()} is ${hisAge.isEven} and is a decent spy ");
+  // print(name + " " + lastName);
+  // print(
+  //     "$name ${lastName.toUpperCase()} is ${hisAge.isEven} and is a decent spy ");
 /*
-      Const and final keywords
+      ! Const and final keywords
       const = we use this keyword when we want the value/variable to be a constant
       at COMPILE-TIME.
       final - if we want a variable/value to always be constant = never changes at anytime
 
-      Operators = Arithmetic ( -, +, *, /, % (remainder) = modulo
-      Equality and Relational Operators ( ==, !=, >, <, >=, <=)
-      as, is and is!
-
+      ! Operators = Arithmetic ( -, +, *, /, % (remainder) = modulo
+      ! Equality and Relational Operators ( ==, !=, >, <, >=, <=)
+      ! Type Test Operators (as, is and is!)
+      as, is and is! test the type of at run time 
+      When comparing two things you are looking fpor a result which is either true or false (boolean)
       remainder = "what remains after a division operation"
       4/3 remainder =??
       4 % 3 = 1 
@@ -66,13 +69,16 @@ main(List<String> arguments) {
 
   int number = 34;
   int numberTwo = 2;
-
+  // print(number == numberTwo);
+  // print(number is String);
+  // print(number as Double);
+/*
   double pii = 3.14;
   double gravity = 9.8;
   // Artithmetic operators
   print(number == numberTwo); //false
-  var result = number + numberTwo; //+
-  var resultMinus = number - numberTwo; //-
+  var result = number + numberTwo;
+  var resultMinus = number - numberTwo;
   var resultDivision = numberTwo /
       number; //Dart automatically changes the two integers into a Double
   print(resultDivision); //0.058823529411764705
@@ -80,14 +86,13 @@ main(List<String> arguments) {
   print("$resultMinus, this is var"); //32, this is var
 
   print(4 % 3);
+  */
 /*
-      Logical Operators ( !, ||, &&)
+      ! Logical Operators ( !, ||, &&)==>>
+      NOT(!) not used in conjunction with equality and relational operators
       OR(||) -> Only one "side" needs to be True for the whole expression to be true
       AND (&&) The expression is true, if both sides are true
-
-      Remainder = "what remains from a division operation"
-      4/3 = remainder?
-    */
+*/
 
   // var  island = "Jamaica";
   // var pi = 3.14;
@@ -160,12 +165,10 @@ main(List<String> arguments) {
   // print(number is! bool);
 
   //If statement
-//  if(number != 34) {
-//     print("If true, this will run!");
-//
-//  }else {
-//    print("Else running!");
-//  }
+  if (number is! int)
+    print("If true, this will run!");
+  else
+    print("Else running!Number is 34!!");
 
   //print(4%3);
 
