@@ -53,11 +53,10 @@ main(List<String> arguments) {
   //     "$name ${lastName.toUpperCase()} is ${hisAge.isEven} and is a decent spy ");
 
 /*
-      ! Const and final keywords
+      ! CONST and FINAL keywords
       const = we use this keyword when we want the value/variable to be a constant
       at COMPILE-TIME.
       final - if we want a variable/value to always be constant = never changes at anytime
-
       ! Operators = Arithmetic ( -, +, *, /, % (remainder) = modulo
       ! Equality and Relational Operators ( ==, !=, >, <, >=, <=)
       ! Type Test Operators (as, is and is!)
@@ -110,13 +109,29 @@ main(List<String> arguments) {
     print("false");
 */
 
-  //!for loop
-  // var fruit = "Mango";
-  // for (var i = 0; i < 10; i++) {
-  //   if (i % 3 == 0) {
-  //     print("$fruit $i");
-  //   }
-  // }
+/*
+  !for loop
+  var fruit = "Mango";
+  num pi = 3;
+  num number = 20;
+
+  for (var i = 30; i >= 20; i--) {
+    print("hello $i");
+  }
+
+//if i is divisble by 3
+  for (var i = 0; i <= 10; i++) {
+    if (i % 3 == 0) {
+      print("$fruit $i");
+    }
+  }
+*/
+
+  for (num i = 0; i <= 1000000; i++) {
+    if (i % 369 == 0) {
+      print("Tesla $i");
+    }
+  }
 
 //! Switch case
 //   var age = 18;
