@@ -3,6 +3,7 @@ import 'dart:ffi';
 main(List<String> arguments) {
   // entry point for execution
   print("Hello World");
+
   //Variable = spot in memory. Or just a bucket to hold a value.
   //!Type??
   /*
@@ -16,23 +17,25 @@ main(List<String> arguments) {
       integers are numbers without a decimal point.  1,2, 3, 5, 10 etc
       doubles do have a decimal point.  1.1, 0.2...
 */
-//!Variables
+/*
+!Variables
   var country = "Africa"; //implicit; generic; fluid;
   String city = "Philadelphia"; //explicit
+*/
 
-//!Numbers
-
+/*
+!Numbers
   num fingers = 5; //
   int toes = 5; // no decimals
   double myAge = 27.0; //decimals
   double net = 1000.45;
   num meee = 5.45;
-
   print(myAge * net); // works
   print(myAge * meee); // works
   print(myAge * toes);
   print("heyyy");
   print(toes + net); // works
+*/
 
 //!Booleans
 
@@ -42,14 +45,13 @@ main(List<String> arguments) {
   // print(isTrue);
 
 //!Concatenation
-
   String name = "James";
   String lastName = "Bond";
   int hisAge = 45;
-
   // print(name + " " + lastName);
   // print(
   //     "$name ${lastName.toUpperCase()} is ${hisAge.isEven} and is a decent spy ");
+
 /*
       ! Const and final keywords
       const = we use this keyword when we want the value/variable to be a constant
@@ -64,15 +66,11 @@ main(List<String> arguments) {
       remainder = "what remains after a division operation"
       4/3 remainder =??
       4 % 3 = 1 
-      
-      */
-
   int number = 34;
   int numberTwo = 2;
   // print(number == numberTwo);
   // print(number is String);
   // print(number as Double);
-/*
   double pii = 3.14;
   double gravity = 9.8;
   // Artithmetic operators
@@ -84,24 +82,35 @@ main(List<String> arguments) {
   print(resultDivision); //0.058823529411764705
   print("$result, this is var"); //36, this is var
   print("$resultMinus, this is var"); //32, this is var
-
   print(4 % 3);
   */
+
 /*
       ! Logical Operators ( !, ||, &&)==>>
-      NOT(!) not used in conjunction with equality and relational operators
+      NOT(!) not used in conjunction with equality and relational operators(opposite)
       OR(||) -> Only one "side" needs to be True for the whole expression to be true
       AND (&&) The expression is true, if both sides are true
+  int yourAge = 45;
+  int ourAge = 83;
+  int randomNum = 16;
+
+  if (!(yourAge == ourAge)) {
+    print("true");
+  } else
+    print("not true");
+
+  if ((randomNum == 16) || (ourAge >= 50)) {
+    print("expression is true");
+  } else
+    print(" espression is false");
+
+  if ((yourAge != 40) && (randomNum <= 20)) {
+    print("true");
+  } else
+    print("false");
 */
 
-  // var  island = "Jamaica";
-  // var pi = 3.14;
-  // pi = 5; // We don' twant this so use Final
-
-  // const pi = 3.14:
-  // pi = 5; //Doesnt work
-
-  //for loop
+  //!for loop
   // var fruit = "Mango";
   // for (var i = 0; i < 10; i++) {
   //   if (i % 3 == 0) {
@@ -109,7 +118,7 @@ main(List<String> arguments) {
   //   }
   // }
 
-// Switch case
+//! Switch case
 //   var age = 18;
 
 //   switch (age) {
@@ -127,7 +136,7 @@ main(List<String> arguments) {
 //       print("Default $age");
 //   }
 
-  // while and do while loop
+  //! while and do while loop
 
 //  do {
 //    print("Hello World");
@@ -165,10 +174,10 @@ main(List<String> arguments) {
   // print(number is! bool);
 
   //If statement
-  if (number is! int)
-    print("If true, this will run!");
-  else
-    print("Else running!Number is 34!!");
+  // if (number != numberTwo)
+  //   print("They are not equal!");
+  // else
+  //   print("they are equal");
 
   //print(4%3);
 
