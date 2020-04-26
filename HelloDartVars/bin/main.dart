@@ -118,20 +118,19 @@ main(List<String> arguments) {
   for (var i = 30; i >= 20; i--) {
     print("hello $i");
   }
-
 //if i is divisble by 3
   for (var i = 0; i <= 10; i++) {
     if (i % 3 == 0) {
       print("$fruit $i");
     }
   }
-*/
-
+  multiples of 396bto a million
   for (num i = 0; i <= 1000000; i++) {
     if (i % 369 == 0) {
       print("Tesla $i");
     }
   }
+*/
 
 //! Switch case
 //   var age = 18;
