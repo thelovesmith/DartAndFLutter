@@ -108,7 +108,9 @@ main(List<String> arguments) {
   } else
     print("false");
 */
-
+//////////////////
+//////////////////
+//////////////////
 /*
   !for loop
   var fruit = "Mango";
@@ -131,38 +133,53 @@ main(List<String> arguments) {
     }
   }
 */
-
+////////////////
+////////////////
+////////////////
 //! Switch case
-//   var age = 18;
-
-//   switch (age) {
-//     case 19:
-//       print("Old enough");
-//       break;
-//     case 20:
-//       print("Still good");
-//       break;
-//     case 89:
-//       print("Too old!");
-//       break;
-
-//     default:
-//       print("Default $age");
-//   }
-
+  // var age = 19;
+/*
+  if (age == 19) {
+    print("You ar eold enought to buy Cigs");
+  } else if (age == 17) {
+    print("you cant buy that");
+  } else if (age == 14) {
+    print("you cant buy anything");
+  }
+  // This if statement is to much, use a swithc case instead
+*/
+/*
+  switch (age) {
+    case 19:
+      print('you can buy cigs');
+      break;
+    case 17:
+      print("you cant buy cigs");
+      break;
+    case 20:
+      print("old enough");
+      break;
+    default:
+      print("defualt $age");
+  }
+*/
+/////////////////
+/////////////////
+/////////////////
   //! while and do while loop
-  // do while loop can avoid infinite loops
-  // break can be used to stop th code 
+/*  do while loop can avoid infinite loops
+  break can be used to stop th code 
 
   var number = 34;
 
-  // do {
-  //   print("hello worlds");
-  // } while (number < 30);
+  do {
+    print("hello worlds");
+  } while (number < 30);
   while (true) {
     if (number == 34) print('Going...');
     break;
   }
+*/
 
 //
 //   if( !(number != 100) && number <= 100 ) { //False AND True
