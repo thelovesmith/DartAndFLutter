@@ -1,8 +1,8 @@
-import 'dart:ffi';
+// import 'dart:ffi';
 
 main(List<String> arguments) {
   // entry point for execution
-  print("Hello World");
+  // print("Hello World");
 
   //Variable = spot in memory. Or just a bucket to hold a value.
   //!Type??
@@ -151,18 +151,18 @@ main(List<String> arguments) {
 //   }
 
   //! while and do while loop
+  // do while loop can avoid infinite loops
+  // break can be used to stop th code 
 
-//  do {
-//    print("Hello World");
-//
-//  }while( number < 34);
+  var number = 34;
 
-//  while(true) { //infinite loop
-//    if(number >= 32)  print("Going..."); break;
-//
-//
-//
-//  }
+  // do {
+  //   print("hello worlds");
+  // } while (number < 30);
+  while (true) {
+    if (number == 34) print('Going...');
+    break;
+  }
 
 //
 //   if( !(number != 100) && number <= 100 ) { //False AND True
