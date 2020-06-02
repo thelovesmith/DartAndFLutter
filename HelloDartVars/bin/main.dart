@@ -204,7 +204,7 @@ main(List<String> arguments) {
 
   // print(number is! bool);
 
-  //If statement
+  //! If statement
   // if (number != numberTwo)
   //   print("They are not equal!");
   // else
@@ -234,7 +234,7 @@ main(List<String> arguments) {
 
 //  var country;
 //
-//  String name; // explicit
+//  !  String name; // explicit
 //
 //  name = "Paulo";
 //  country = "Japan";
