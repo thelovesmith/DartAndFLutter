@@ -167,19 +167,19 @@ main(List<String> arguments) {
 /////////////////
 /////////////////
   //! while and do while loop
-/*  do while loop can avoid infinite loops
-  break can be used to stop th code 
+//  do while loop can avoid infinite loops
+//   break can be used to stop th code 
 
   var number = 34;
 
-  do {
-    print("hello worlds");
-  } while (number < 30);
+  // do {
+  //   print("hello worlds");
+  // } while (number < 30); //
   while (true) {
     if (number == 34) print('Going...');
     break;
   }
-*/
+
 
 //
 //   if( !(number != 100) && number <= 100 ) { //False AND True
