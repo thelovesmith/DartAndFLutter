@@ -7,6 +7,7 @@ main(List<String> args) {
 }
 
 // Compartmentalizing our code
+// these functions are void 
 myfunction() {
   num x = 2;
   num y = 3;
