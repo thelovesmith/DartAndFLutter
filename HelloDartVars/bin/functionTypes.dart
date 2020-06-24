@@ -1,5 +1,7 @@
 //  Functions can return things, they only return the Type of object that is stated before the function name. If a function has no name in front of it, then it is "void" and does not return anything but just calculates what is inside of it. But there are times that we actually want our functions to return something.
 
+
+//! Return Type functions 
 main(List<String> args) {
   // unoFunction();
   var name = showName();
@@ -7,7 +9,7 @@ main(List<String> args) {
   // print(name);
   // print(showName());
   print("hello my name is $name i am $age years old");
-  print(isKnowing(age));
+  print("Is it true? ${isKnowing(age)}");
 }
 
 // this function would be void since it has no name
