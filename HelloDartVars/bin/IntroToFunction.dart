@@ -1,7 +1,7 @@
 import "package:HelloDartVars/HelloDartVars.dart" as HelloDartVars;
 
 main(List<String> args) {
-  print('Hello Wolrd: ${HelloDartVars.calculate()}!');
+  print('Hello Wolrd: ${HelloDartVars.calculate()}!'); //importjing another function 
   myfunction();
   randomFunciton();
 }

@@ -41,3 +41,10 @@ double cost() {
   double price = 11.22;
   return price;
 }
+
+//! Using => operator to return functions
+// => expr == {return expression}
+// only works for returning single expressions
+String getName() => "James Bond";
+
+int showAgeNow() => 34;
