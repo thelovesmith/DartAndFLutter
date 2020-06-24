@@ -3,9 +3,11 @@
 main(List<String> args) {
   // unoFunction();
   var name = showName();
-  print(name);
-  print(showName());
-  print("hello my name is ${showName()} i am ${showAge()} years old");
+  var age = showAge();
+  // print(name);
+  // print(showName());
+  print("hello my name is $name i am $age years old");
+  print(isKnowing(age));
 }
 
 // this function would be void since it has no name
@@ -21,4 +23,12 @@ String showName() {
 
 int showAge() {
   return 27;
+}
+
+bool isKnowing(age) {
+  if (age > 21) {
+    return true;
+  } else {
+    return false;
+  }
 }
