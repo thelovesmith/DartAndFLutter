@@ -1,6 +1,7 @@
 main(List<String> args) {
   print(sayHello("Avery", "Hinds", 27));
   print(isLegal(25));
+  print(calculate(10, 12, 5, 2));
 }
 
 // String sayHello(String name) {
@@ -16,3 +17,5 @@ String isLegal(int age) {
     return "is legal";
   }
 }
+
+double calculate(int x, int y, int z, [int r]) => (x / y * z); //the r is optional argument/paramter
