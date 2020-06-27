@@ -1,5 +1,5 @@
 var myOutsideVar = "outside"; // LExical Scope tutorial
-//in DART if you want a variable to be accessible everywhere you must declare it outside the main method. THen it will be asseccible down the heirarchy 
+//in DART if you want a variable to be accessible everywhere you must declare it outside the main method. THen it will be asseccible down the heirarchy
 // Data runs inward not outward. Can't acces a variable inside a function outside of said function. //SCOPE
 
 main(List<String> args) {
@@ -20,7 +20,7 @@ main(List<String> args) {
   print(myOutsideVar);
 
   void insideFunc() {
-    myOutsideVar = "heyy";
+    // myoutsidevar has global scope since it is in the most outward position. Vars are accessible  inward
     print(myOutsideVar);
   }
 
