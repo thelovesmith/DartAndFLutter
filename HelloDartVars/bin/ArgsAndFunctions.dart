@@ -1,10 +1,11 @@
-// import 'package:test/test.dart';
+var myOutsideVar = "outside"; // LExical Scope tutorial 
 
 main(List<String> args) {
   // print(sayHello("Avery", "Hinds", 27));
   // print(isLegal(25));
   // print(calculate(10, 12, 5, 2));
-  print(yourAge("avery-dante", "hinds"));
+  // print(yourAge("avery-dante", "hinds"));
+  print(myOutsideVar);
 }
 
 // String sayHello(String name) {
