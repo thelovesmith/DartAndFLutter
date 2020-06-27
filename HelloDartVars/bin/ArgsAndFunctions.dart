@@ -1,7 +1,10 @@
+// import 'package:test/test.dart';
+
 main(List<String> args) {
-  print(sayHello("Avery", "Hinds", 27));
-  print(isLegal(25));
-  print(calculate(10, 12, 5, 2));
+  // print(sayHello("Avery", "Hinds", 27));
+  // print(isLegal(25));
+  // print(calculate(10, 12, 5, 2));
+  print(yourAge("avery-dante", "hinds"));
 }
 
 // String sayHello(String name) {
@@ -18,4 +21,15 @@ String isLegal(int age) {
   }
 }
 
-double calculate(int x, int y, int z, [int r]) => (x / y * z); //the r is optional argument/paramter
+double calculate(int x, int y, int z, [int r]) =>
+    (x / y * z); //the r is optional positional parameter
+
+String yourAge(String name, String lastname, [int age]) {
+  var finalResult = "$name $lastname";
+  if (age == null) {
+    finalResult = "$finalResult does not want to share their age";
+  } else if (age != null){
+    finalResult = "$finalResult is $age";
+  }
+  return finalResult;
+}
