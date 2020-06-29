@@ -1,35 +1,23 @@
-
-
-class Microphone{
-
+class Microphone {
   //Instance variables, member variables
   //this = this object/class
-   String name;
-   String color;
-   int model = 4536;
+  String name;
+  String color;
+  int model = 4536;
 
-
-   //Syntactic sugar constructor
-   Microphone(this.name, this.color, this.model);
+  //Syntactic sugar constructor
+  Microphone(this.name, this.color, this.model);
 
 // Named Constructor
-   Microphone.initialize() {
-      name = "Blue Yeti 2nd Edition";
-      model = 67;
+  Microphone.initialize() {
+    name = "Blue Yeti 2nd Edition";
+    model = 67;
+  }
 
+  String get getName => name; // getter
+  set setName(String value) => name = value; // setter
 
-
-   }
-
-
-   String get getName => name; // getter
-   set setName(String value) => name = value; // setter
-
-
-
-
-
-   //constructor
+  //constructor
 //   Microphone(String name, String color, int model) {
 //
 //       this.name = name;
@@ -37,61 +25,34 @@ class Microphone{
 //       this.model = model;
 //   }
 
-   //Microphone(this.name, this.color, this.model);
+  //Microphone(this.name, this.color, this.model);
 
-   void turnOn() {
-     print("$name is on!");
+  void turnOn() {
+    print("$name is on!");
+  }
 
-   }
+  bool isOn() => true;
 
-   bool isOn() => true;
+  int modelNumber() => model;
 
-   int modelNumber() => model;
+  void turnOff() {
+    print("$name is turned off!");
+  }
 
-
-
-   void turnOff() {
-     print("$name is turned off!");
-   }
-
-   void setVolume() {
-     print("$name with color: $color volume is up!");
-   }
-
-
-
-
+  void setVolume() {
+    print("$name with color: $color volume is up!");
+  }
 }
 
-
-
 main(List<String> arguments) {
-
-  var mic = new Microphone("Blue Yeti", "Silver gray", 1345); // we are crating the actual object of type mic
+  var mic = new Microphone("Blue Yeti", "Silver gray",
+      1345); // we are crating the actual object of type mic
 
   mic.setName = "NewName";
 
   String name = "Paulo";
-  
 
   print(mic.getName);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //  var micSecond = new Microphone.initialize(); // using the initialize named constructor
 //
@@ -107,7 +68,4 @@ main(List<String> arguments) {
 //
 //  print(mic.isOn());
 //  print(mic.modelNumber());
-
-
-
 }
