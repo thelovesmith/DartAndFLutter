@@ -33,7 +33,7 @@ class Date {
   }
 
   // void setSex() {}
-  bool isOrgasm() {
+  bool didOrgasm() {
     return true;
   }
 
@@ -43,18 +43,14 @@ class Date {
 main(List<String> args) {
   // print("I am Avery");
 
-  var date =
+  var jenny =
       //new Date(); // here we actually create an instance of an object with the type Date
 
       new Date("Jenny", 27, true, false, "Female",
           "She enjoys talkign about work", "Leo", "Pisces", "gemini");
-  // date.name = "Jenny";
-  // date.age = 26;
-  // date.notes = "She enjoys happy hour and korean bbq";
-  // date.sex = "female";
-  // print(date.name); // dot access operator
-  // print(date.notes);
-  // print(date.sex);
-  date.printName();
-  print(date.createNotes());
+ 
+  jenny.printName();
+  print(jenny.createNotes());
+
+var tine = new Date("Tina", 28, true, false, "Female", "She can read my mind and enjoys deep conversation", "Sagittarius");
 }

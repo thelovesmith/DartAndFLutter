@@ -25,6 +25,7 @@ main(List<String> args) {
   }
 
   insideFunc();
+  print(isReal(33, "Pennsylvania", 14539080));
 }
 
 // String sayHello(String name) {
@@ -44,4 +45,14 @@ String yourAge(String name, String lastname, [int age]) {
     finalResult = "$finalResult is $age";
   }
   return finalResult;
+}
+
+
+//return functions practice//
+bool isReal(int age, String residency, int ssn, [int dob]) {
+  var realStatus;
+  if ((age >= 18) && (residency != "") && (ssn != 0)) {
+    realStatus = true;
+  }
+  return realStatus;
 }
