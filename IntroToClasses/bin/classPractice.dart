@@ -32,8 +32,7 @@ class Date {
   }
 
 //! Getters and Setters
-// These are implicit when you initialize a variable however its good to know
-
+// These are implicit when you initialize a variable however its good to know how to mannualy set them
   String get getname => name;
   set setname(String value) => name = value;
 
