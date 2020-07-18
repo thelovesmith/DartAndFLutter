@@ -19,7 +19,7 @@ class Date {
   Date(this.name, this.age, this.orgasm, this.protected, this.sex, this.sun,
       this.moon, this.rising, this.notes);
 
-// Named constructor this lets you set values for vars to a named constructir that you can call later
+// Named constructor this lets you set values for vars to a named constructo[r that you can call later
   Date.initialize() {
     name = "Ashlee";
     age = 33;
