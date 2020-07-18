@@ -20,6 +20,10 @@ class Automobile {
     }
     return isUsed;
   }
+
+  void showVIN() {
+    print("000000000000");
+  }
 }
 
 class Ford extends Automobile {
@@ -27,6 +31,11 @@ class Ford extends Automobile {
 
   void showModel() {
     print(' This is a Ford ${this.model}');
+  }
+
+  @override
+  void showVIN() {
+    print("2340187623401872");
   }
 }
 
@@ -49,9 +58,16 @@ main(List<String> args) {
       "${explorer.year} ${explorer.make.toUpperCase()} ${explorer.model}";
   explorer.showModel();
   explorer.showName();
+  explorer.showVIN();
   print(explorer.isUsed());
 
   var pathfinder = new Nissan();
+  pathfinder.make = "Nissan";
+  pathfinder.year = 2015;
   pathfinder.model = "Pathfinder";
+  pathfinder.name =
+      "${pathfinder.year} ${pathfinder.make} ${pathfinder.model} ";
   pathfinder.showModel();
+  pathfinder.showName();
+  pathfinder.showVIN();
 }
