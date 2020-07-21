@@ -7,13 +7,21 @@ class Location {
 
 //named constructor
   Location.elevate(this.lat, this.lng);
+  String toString() {
+    var result = "$lat $lng $code";
+    return result;
+  }
 }
 
 class ElevatedLocation extends Location {
   num elevation;
   ElevatedLocation(num lat, num lng, this.elevation)
       : super.elevate(lat, lng); //call Location() Constructor
-
+  @override
+  String toString() {
+    var result = "$lat $lng $elevation";
+    return result;
+  }
 }
 
 class GoogleMapsLocation extends Location {
@@ -23,11 +31,12 @@ class GoogleMapsLocation extends Location {
 }
 
 main(List<String> args) {
-  // var location = new Location(200.22, 12.45);
+  var location = new Location(200.22, 12.45, 10.23);
+  print(location.toString());
   // print("Location = ${location.lat}, ${location.lng}");
 
   var elevated = new ElevatedLocation(22.56, 235.74, 90);
-  print("location = ${elevated.lat}, ${elevated.lng} ${elevated.elevation}");
+  print(elevated.toString());
   elevated.city = "Jericho";
 
   var googleLocation = new GoogleMapsLocation(200.56, -23.55, "Philly", 20.34);
