@@ -34,6 +34,15 @@ class Plumber extends Mentor implements IsTeaching {
   }
 }
 
+class Electrician extends Mentor implements IsTeaching {
+  Electrician(String firstName, String lastName, String profession)
+      : super(firstName, lastName, profession);
+  @override
+  void isSearchingForApprentice() {
+    print("I am searching for an apprentice");
+  }
+}
+
 class Mentor implements User {
   String firstName, lastName, profession;
   Mentor(this.firstName, this.lastName, this.profession);
