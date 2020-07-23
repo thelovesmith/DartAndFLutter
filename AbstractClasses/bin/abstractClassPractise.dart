@@ -1,13 +1,14 @@
 abstract class User {
-  String firstName, lastName;
   void logIn(); // an abstract method
   void signUp() {
     print("user signs up");
   }
+
+  void logOut();
 }
 
 abstract class IsTeaching {
-  void isSearchingForApprentice(); //abstaract method
+  void isSearchingForApprentice(); //abstract method
 }
 
 abstract class IsLearning {
@@ -24,15 +25,18 @@ class Carpenter extends Mentor implements IsTeaching {
   }
 }
 
+class Plumber extends Mentor implements IsTeaching {
+  Plumber(String firstname, String lastName, String profession)
+      : super(firstname, lastName, profession);
+  @override
+  void isSearchingForApprentice() {
+    print('I am searching for an apprentice');
+  }
+}
+
 class Mentor implements User {
-  String profession;
-  Mentor(String firstName, String lastName, this.profession);
-
-  @override
-  String firstName;
-
-  @override
-  String lastName;
+  String firstName, lastName, profession;
+  Mentor(this.firstName, this.lastName, this.profession);
 
   @override
   void logIn() {
@@ -43,16 +47,20 @@ class Mentor implements User {
   void signUp() {
     print("$firstName $lastName signs up!");
   }
+
+  @override
+  String toString() => "$firstName $lastName $profession";
+
+  @override
+  void logOut() {
+    print("$firstName $lastName the $profession logged out");
+  }
+  //For some reason this method lets you just print the whole objecrt
 }
 
 class Apprentice implements User {
-  String profession;
-  Apprentice(String firstName, String lastName, this.profession);
-  @override
-  String firstName;
-
-  @override
-  String lastName;
+  String firstName, lastName, profession;
+  Apprentice(this.firstName, this.lastName, this.profession);
 
   @override
   void signUp() {
@@ -63,11 +71,18 @@ class Apprentice implements User {
   void logIn() {
     print("the Apprentice $firstName $lastName logged in");
   }
+
+  @override
+  void logOut() {
+    print("$firstName $lastName the $profession logged out");
+  }
 }
 
 main(List<String> args) {
-  //Todo create an instance of the carpenter class
+  var carpenter = new Carpenter("John", "Smith", "Carpenter");
+  print(carpenter);
   var mentor = new Mentor("James", "Smith", "Plumber");
-  mentor.logIn();
-  mentor.signUp();
+  // mentor.logIn();
+  // mentor.signUp();
+  print(mentor);
 }

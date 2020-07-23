@@ -6,7 +6,7 @@
 //? Interfaces: Common functionality to unrelated classes
 // Classes can extend a parent class but also implment an interface an inherit properties and methods from both
 
-//? Abstract Classes: Not concrete, an idea, a concepy, generic class
+//? Abstract Classes: Not concrete, an idea, a concept, generic class
 // Pretty much the upper most class in the heirarchy.
 // I.E. Animal -> Felines -> Cat //Animal is abstract
 // I.E. Animal -> Human -> Actor //Animal is Abstract
