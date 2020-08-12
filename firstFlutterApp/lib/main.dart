@@ -11,6 +11,7 @@ class Home extends StatelessWidget {
       child: Text(
         "Welcome Avery",
         textDirection: TextDirection.ltr,
+        softWrap: true,
       ),
     );
   }
