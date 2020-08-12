@@ -4,7 +4,7 @@ abstract class User {
     print("user signs up");
   }
 
-  void logOut();
+  void logOut(); //cecking ssh
 }
 
 abstract class IsTeaching {
