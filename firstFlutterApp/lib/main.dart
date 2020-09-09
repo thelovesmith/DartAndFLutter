@@ -9,7 +9,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Text(
-        "Welcome Avery",
+        "Welcome Vega",
         textDirection: TextDirection.ltr,
         softWrap: true,
       ),
