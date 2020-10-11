@@ -1,18 +1,10 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(Home());
-}
+import 'ui/home.dart';
 
-class Home extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        "Welcome Vega",
-        textDirection: TextDirection.ltr,
-        softWrap: true,
-      ),
-    );
-  }
-}
+// void main() => runApp(ScaffoldExamle());
+
+void main() => runApp(new MaterialApp(home: ScaffoldExamle()));
+
+//Material Design emulates the emotion, motion, and shadows that mimic real life exeperience interacting with real onjects.
+//It's a concetual piece of paper on which the UI appears
