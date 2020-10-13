@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-class ScaffoldExamle extends StatelessWidget {
+class ScaffoldExample extends StatelessWidget {
   _tapButton() {
     debugPrint("button tapped");
   }
@@ -30,11 +30,27 @@ class ScaffoldExamle extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             InkWell(
+              focusColor: Colors.purpleAccent,
               highlightColor: Colors.amber,
               borderRadius: BorderRadius.all(Radius.circular(10)),
-              child: Text("TAP ME!",
-                  style: TextStyle(fontStyle: FontStyle.italic, fontSize: 25)),
-              onTap: () => debugPrint("Tapped!"),
+              child: Container(
+                decoration: new BoxDecoration(
+                  boxShadow: [
+                    new BoxShadow(
+                      color: Colors.amberAccent.shade200,
+                      offset: new Offset(5.0, 5.0),
+                      blurRadius: 5.5,
+                    )
+                  ],
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("TAP ME!",
+                      style:
+                          TextStyle(fontStyle: FontStyle.italic, fontSize: 20)),
+                ),
+              ),
+              onTap: () => debugPrint("Ink Well Tapped"),
             )
           ],
         ),
