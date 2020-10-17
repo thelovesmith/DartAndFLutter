@@ -4,7 +4,7 @@
 // a solution is an interface or  abstract class
 
 //? Interfaces: Common functionality to unrelated classes
-// Classes can extend a parent class but also implment an interface an inherit properties and methods from both
+// Classes can extend a parent class but also implment and interface an inherit properties and methods from both
 
 //? Abstract Classes: Not concrete, an idea, a concept, generic class
 // Pretty much the upper most class in the heirarchy.
