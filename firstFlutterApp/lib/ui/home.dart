@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
+import 'buttons.dart';
+
 class ScaffoldExample extends StatelessWidget {
   _tapButton() {
     debugPrint("button tapped");
@@ -23,38 +25,26 @@ class ScaffoldExample extends StatelessWidget {
           )
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => debugPrint("floating button pressed"),
+        backgroundColor: Colors.green,
+        child: Icon(Icons.call_missed),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.ac_unit), label: "AC"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.access_alarm), label: "Alarm"),
+          BottomNavigationBarItem(icon: Icon(Icons.ad_units), label: "Next")
+        ],
+        onTap: (int index) => debugPrint("Tapped Item: $index"),
+      ),
       backgroundColor: Colors.amber.shade100,
       body: Container(
         alignment: Alignment.center,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            CustomButton()
-            // InkWell(
-            //   focusColor: Colors.purpleAccent,
-            //   highlightColor: Colors.amber,
-            //   borderRadius: BorderRadius.all(Radius.circular(25)),
-            //   child: Container(
-            //     // decoration: new BoxDecoration(
-            //     //   boxShadow: [
-            //     //     new BoxShadow(
-            //     //       color: Colors.amberAccent.shade200,
-            //     //       offset: new Offset(5.0, 5.0),
-            //     //       blurRadius: 5.5,
-            //     //     )
-            //     //   ],
-            //     // ),
-            //     child: Padding(
-            //       padding: const EdgeInsets.all(8.0),
-            //       child: Text("TAP ME!",
-            //           style:
-            //               TextStyle(fontStyle: FontStyle.italic, fontSize: 20)),
-            //     ),
-            //   ),
-            //   onTap: () => debugPrint("Ink Well Tapped"),
-            //   onLongPress: () => debugPrint("Long PRess"),
-            // )
-          ],
+          children: [CustomButton(), CustomInKwell()],
         ),
       ),
     );
@@ -77,27 +67,5 @@ class Home extends StatelessWidget {
         ),
       ),
     );
-  }
-}
-
-class CustomButton extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-        onTap: () {
-          final snackBar = SnackBar(content: Text("one tap"));
-          Scaffold.of(context).showSnackBar(snackBar);
-        },
-        onDoubleTap: () {
-          final snackBar2 = SnackBar(content: Text("double tap"));
-          Scaffold.of(context).showSnackBar(snackBar2);
-        },
-        child: Container(
-          padding: EdgeInsets.all(10.0),
-          decoration: BoxDecoration(
-              color: Colors.pinkAccent,
-              borderRadius: BorderRadius.circular(8.0)),
-          child: Text("Button"),
-        ));
   }
 }
