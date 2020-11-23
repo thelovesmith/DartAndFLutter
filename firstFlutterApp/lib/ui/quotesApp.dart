@@ -24,32 +24,52 @@ class _WisdomState extends State<Wisdom> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.deepPurpleAccent,
+        title: Text(
+          "Quotes App",
+          style: TextStyle(
+              color: Colors.white, fontSize: 30, fontFamily: 'Avenir Next'),
+        ),
+      ),
       body: Container(
+        color: Colors.black,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(30.0),
-              child: Center(
-                  child: Text(
-                quotes[_index % quotes.length],
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 20),
-              )),
+            Container(
+              height: 300,
+              width: 350,
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(5.0, 10, 5, 0),
+                child: Center(
+                    child: Text(
+                  quotes[_index % quotes.length],
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 20, color: Colors.white70),
+                )),
+              ),
             ),
             Divider(
               thickness: 3.0,
-            ),
-            FlatButton.icon(
               color: Colors.deepPurpleAccent,
-              onPressed: _showQuote,
-              icon: Icon(
-                Icons.wb_sunny,
-                color: Colors.white,
-              ),
-              label: Text(
-                "Inspire Me",
-                style: TextStyle(color: Colors.white),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 10.0),
+              child: FlatButton.icon(
+                color: Colors.deepPurpleAccent,
+                onPressed: _showQuote,
+                icon: Icon(
+                  Icons.wb_sunny,
+                  color: Colors.white,
+                ),
+                label: Text(
+                  "Inspire Me",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontFamily: 'Avenir Next',
+                      fontSize: 16),
+                ),
               ),
             ),
             Spacer()
