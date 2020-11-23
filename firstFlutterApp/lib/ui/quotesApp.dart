@@ -9,8 +9,59 @@ class Wisdom extends StatefulWidget {
 
 //! State object
 class _WisdomState extends State<Wisdom> {
+  List quotes = [
+    'We are what we repeatedly do. Excellence, therefore, is not an act but a habit.',
+    "The best way out is always through.",
+    "Do not wait to strike till the iron is hot; but make it hot by striking.",
+    "Great spirits have always encountered violent opposition from mediocre minds.",
+    "Whether you think you can or think you can’t, you’re right.I know for sure that what we dwell on is who we become.",
+    " I’ve missed more than 9000 shots in my career. I’ve lost almost 300 games. 26 times, I’ve been trusted to take the game winning shot and missed. I’ve failed over and over and over again in my life. And that is why I succeed.",
+    "You must be the change you want to see in the world.",
+    "What you get by achieving your goals is not as important as what you become by achieving your goals.",
+  ];
+
+  int _index = 0;
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Container(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(30.0),
+              child: Center(
+                  child: Text(
+                quotes[_index % quotes.length],
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 20),
+              )),
+            ),
+            Divider(
+              thickness: 3.0,
+            ),
+            FlatButton.icon(
+              color: Colors.deepPurpleAccent,
+              onPressed: _showQuote,
+              icon: Icon(
+                Icons.wb_sunny,
+                color: Colors.white,
+              ),
+              label: Text(
+                "Inspire Me",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+            Spacer()
+          ],
+        ),
+      ),
+    );
+  }
+
+  void _showQuote() {
+    setState(() {
+      _index += 1;
+    });
   }
 }
