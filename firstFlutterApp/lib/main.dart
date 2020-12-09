@@ -1,4 +1,5 @@
 import 'package:firstFlutterApp/ui/bizCard.dart';
+import 'package:firstFlutterApp/ui/tipCalc.dart';
 import 'package:flutter/material.dart';
 import 'ui/quotesApp.dart';
 import 'ui/home.dart';
@@ -6,8 +7,8 @@ import 'ui/home.dart';
 // void main() => runApp(ScaffoldExamle());
 
 void main() => runApp(new MaterialApp(
-      home: Wisdom(),
-      debugShowCheckedModeBanner: false, //removes debug banner from UI
+      home: TipCalculator(),
+      debugShowCheckedModeBanner: true, //removes debug banner from UI
     ));
 
 //Material Design emulates the emotion, motion, and shadows that mimic real life exeperience interacting with real onjects.
