@@ -7,6 +7,7 @@ class TipCalculator extends StatefulWidget {
 }
 
 class _CalculatorState extends State<TipCalculator> {
+  //values with underscores in front of them are private to this stateful widget
   int _tipPercentage = 0;
   double _billAmount = 0.0;
   int _personCounter = 1;
@@ -38,7 +39,8 @@ class _CalculatorState extends State<TipCalculator> {
                               fontWeight: FontWeight.normal,
                               fontSize: 15)),
                     ),
-                    Text("\$123",
+                    Text(
+                        "\$ ${calculateTotalPerPerson(_billAmount, _personCounter, _tipPercentage)}",
                         style: TextStyle(
                             color: _purple,
                             fontSize: 33,
@@ -168,13 +170,13 @@ class _CalculatorState extends State<TipCalculator> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Tip",
+                        "Tip Amount",
                         style: TextStyle(color: Colors.grey.shade700),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(18.0),
                         child: Text(
-                          "\$34",
+                          "\$ ${(calculateTotalTip(_billAmount, _tipPercentage, _personCounter)).toStringAsFixed(2)}",
                           style: TextStyle(
                               color: _purple,
                               fontWeight: FontWeight.bold,
@@ -186,7 +188,7 @@ class _CalculatorState extends State<TipCalculator> {
                   //! SLider
                   Column(children: [
                     Text(
-                      "$_tipPercentage",
+                      "$_tipPercentage\%",
                       style: TextStyle(
                           color: _purple,
                           fontSize: 17,
@@ -198,6 +200,7 @@ class _CalculatorState extends State<TipCalculator> {
                         divisions: 10,
                         activeColor: _purple,
                         inactiveColor: Colors.grey,
+                        label: "Tip Percentage",
                         value: _tipPercentage.toDouble(),
                         onChanged: (double value) {
                           setState(() {
@@ -212,5 +215,25 @@ class _CalculatorState extends State<TipCalculator> {
         ),
       ),
     );
+  }
+
+  calculateTotalPerPerson(double billAmount, int splitBy, int tipPercentage) {
+    var totalPerPerson =
+        (calculateTotalTip(billAmount, tipPercentage, splitBy) + billAmount) /
+            splitBy;
+    return totalPerPerson.toStringAsFixed(2);
+  }
+
+  calculateTotalTip(double billAmount, int tipPercentage, int splitBy) {
+    double totalTip = 0.0;
+
+    if (billAmount == 0 ||
+        billAmount.toString().isEmpty ||
+        billAmount == null) {
+      //todo
+    } else {
+      totalTip = (billAmount * tipPercentage) / 100;
+    }
+    return totalTip;
   }
 }
