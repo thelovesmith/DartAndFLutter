@@ -29,7 +29,21 @@ class _CalculatorState extends State<TipCalculator> {
               child: Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [Text("Total Per Person"), Text("\$123")],
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text("Total Per Person",
+                          style: TextStyle(
+                              color: _purple,
+                              fontWeight: FontWeight.normal,
+                              fontSize: 15)),
+                    ),
+                    Text("\$123",
+                        style: TextStyle(
+                            color: _purple,
+                            fontSize: 33,
+                            fontWeight: FontWeight.bold))
+                  ],
                 ),
               ),
               decoration: BoxDecoration(
@@ -149,6 +163,48 @@ class _CalculatorState extends State<TipCalculator> {
                       ),
                     ],
                   ),
+                  //Tip Row
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Tip",
+                        style: TextStyle(color: Colors.grey.shade700),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(18.0),
+                        child: Text(
+                          "\$34",
+                          style: TextStyle(
+                              color: _purple,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 17),
+                        ),
+                      )
+                    ],
+                  ),
+                  //! SLider
+                  Column(children: [
+                    Text(
+                      "$_tipPercentage",
+                      style: TextStyle(
+                          color: _purple,
+                          fontSize: 17,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Slider(
+                        min: 0,
+                        max: 100,
+                        divisions: 10,
+                        activeColor: _purple,
+                        inactiveColor: Colors.grey,
+                        value: _tipPercentage.toDouble(),
+                        onChanged: (double value) {
+                          setState(() {
+                            _tipPercentage = value.round();
+                          });
+                        })
+                  ])
                 ],
               ),
             ),
