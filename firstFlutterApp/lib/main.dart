@@ -1,8 +1,8 @@
-import 'package:firstFlutterApp/ui/bizCard.dart';
+// import 'package:firstFlutterApp/ui/bizCard.dart';
 import 'package:firstFlutterApp/ui/tipCalc.dart';
 import 'package:flutter/material.dart';
-import 'ui/quotesApp.dart';
-import 'ui/home.dart';
+// import 'ui/quotesApp.dart';
+// import 'ui/home.dart';
 
 // void main() => runApp(ScaffoldExamle());
 
