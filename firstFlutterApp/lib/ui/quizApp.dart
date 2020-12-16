@@ -14,10 +14,20 @@ class _QuizAppState extends State<QuizApp> {
         centerTitle: true,
         backgroundColor: Colors.blueGrey,
       ),
+      backgroundColor: Colors.blueGrey.shade100,
       body: Container(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [Image.asset("../utils/flag.png"), Row(), Row()],
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Image.asset(
+              "images/flag.png",
+              height: 200,
+              width: 350,
+            ),
+            Row(),
+            Row()
+          ],
         ),
       ),
     );
