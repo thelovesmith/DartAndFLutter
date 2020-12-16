@@ -8,7 +8,18 @@ class QuizApp extends StatefulWidget {
 class _QuizAppState extends State<QuizApp> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("True Citizen"),
+        centerTitle: true,
+        backgroundColor: Colors.blueGrey,
+      ),
+      body: Container(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [Row(), Row()],
+        ),
+      ),
+    );
   }
 }
