@@ -17,7 +17,7 @@ class _QuizAppState extends State<QuizApp> {
       body: Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [Row(), Row()],
+          children: [Image.asset("../utils/flag.png"), Row(), Row()],
         ),
       ),
     );
