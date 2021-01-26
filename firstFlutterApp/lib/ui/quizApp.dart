@@ -96,8 +96,8 @@ class _QuizAppState extends State<QuizApp> {
     setState(() {
       _questionCounter = (_questionCounter + 1) % questionBank.length;
     });
-    print(_questionCounter);
-    print(questionBank.length);
-    print(2 % 5);
+    // print(_questionCounter);
+    // print(questionBank.length);
+    // print(2 % 5);
   }
 }
