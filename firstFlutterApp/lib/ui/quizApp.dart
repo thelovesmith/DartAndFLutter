@@ -45,7 +45,7 @@ class _QuizAppState extends State<QuizApp> {
               Padding(
                 padding: const EdgeInsets.all(9.0),
                 child: Container(
-                    padding: EdgeInsets.all(10),
+                    padding: EdgeInsets.fromLTRB(40, 10, 40, 10),
                     decoration: BoxDecoration(
                         color: Colors.transparent,
                         borderRadius: BorderRadius.circular(15),
@@ -56,7 +56,11 @@ class _QuizAppState extends State<QuizApp> {
                     child: Center(
                         child: Text(
                       questionBank.elementAt(_questionCounter).questionText,
-                      style: TextStyle(fontSize: 18, color: Colors.white),
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.white,
+                      ),
+                      textAlign: TextAlign.center,
                     ))),
               ),
               Row(
@@ -98,6 +102,7 @@ class _QuizAppState extends State<QuizApp> {
     if (userChoice == questionBank[_questionCounter].isCorrect) {
       debugPrint("IS correct");
       Scaffold.of(context).showSnackBar(snackbarCorrect);
+      _nextQuestion();
     } else {
       Scaffold.of(context).showSnackBar(snackbarIncorrect);
     }
@@ -105,6 +110,7 @@ class _QuizAppState extends State<QuizApp> {
 
   _nextQuestion() {
     setState(() {
+      // setting the state for the wuestion index and using modulo to insure we dont break the function when it iterates through the whole list.
       _questionCounter = (_questionCounter + 1) % questionBank.length;
     });
     // print(_questionCounter);
@@ -112,11 +118,15 @@ class _QuizAppState extends State<QuizApp> {
     // print(2 % 5);
   }
 
+  static Duration snackBarDuration = Duration(milliseconds: 500);
+
   final snackbarCorrect = SnackBar(
     content: Text('Correct'),
+    duration: snackBarDuration,
   );
 
   final snackbarIncorrect = SnackBar(
     content: Text('Incorrect'),
+    duration: snackBarDuration,
   );
 }
