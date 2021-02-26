@@ -67,6 +67,11 @@ class _QuizAppState extends State<QuizApp> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   RaisedButton(
+                    onPressed: () => _prevQuestion(),
+                    color: Colors.blueGrey,
+                    child: Icon(Icons.arrow_back, color: Colors.white),
+                  ),
+                  RaisedButton(
                     onPressed: () => _checkAnswer(true, context),
                     color: Colors.blueGrey,
                     child: Text(
@@ -105,6 +110,7 @@ class _QuizAppState extends State<QuizApp> {
       _nextQuestion();
     } else {
       Scaffold.of(context).showSnackBar(snackbarIncorrect);
+      _nextQuestion();
     }
   }
 
@@ -118,14 +124,22 @@ class _QuizAppState extends State<QuizApp> {
     // print(2 % 5);
   }
 
+  _prevQuestion() {
+    setState(() {
+      _questionCounter = (_questionCounter - 1) % questionBank.length;
+    });
+  }
+
   static Duration snackBarDuration = Duration(milliseconds: 500);
 
   final snackbarCorrect = SnackBar(
+    backgroundColor: Colors.green.shade400,
     content: Text('Correct'),
     duration: snackBarDuration,
   );
 
   final snackbarIncorrect = SnackBar(
+    backgroundColor: Colors.red.shade400,
     content: Text('Incorrect'),
     duration: snackBarDuration,
   );
