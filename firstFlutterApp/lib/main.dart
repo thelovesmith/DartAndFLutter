@@ -1,4 +1,5 @@
 // import 'package:firstFlutterApp/ui/bizCard.dart';
+import 'package:firstFlutterApp/ui/movieList.dart';
 import 'package:firstFlutterApp/ui/quizApp.dart';
 // import 'package:firstFlutterApp/ui/tipCalc.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +9,7 @@ import 'package:flutter/material.dart';
 // void main() => runApp(ScaffoldExamle());
 
 void main() => runApp(new MaterialApp(
-      home: QuizApp(),
+      home: MovieListView(),
       debugShowCheckedModeBanner: true, //removes debug banner from UI
     ));
 
